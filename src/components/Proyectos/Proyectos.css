@@ -1,0 +1,44 @@
+.proyectos-container {
+  padding: 4rem 2rem;
+  text-align: center;  
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.proyecto-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-5px);
+}
+
+.proyecto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.proyecto-info {
+  padding: 1rem;
+}
+
+.ver-mas {
+  font-weight: bold;
+  color: #1976d2;
+  display: block;
+  margin-top: 0.5rem;
+}

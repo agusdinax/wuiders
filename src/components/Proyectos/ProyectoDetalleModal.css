@@ -1,0 +1,124 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-detalle {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-detalle h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.modal-detalle ul {
+  list-style: none;
+  padding-left: 0;
+}
+.modal-detalle p,
+.modal-detalle ul,
+.modal-detalle li {
+  text-align: left;
+}
+.modal-detalle li {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.screenshots-grid img {
+  width: 100%;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.btn-visitar {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.4rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Ya existentes... */
+.screenshots-grid img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.screenshots-grid img:hover {
+  transform: scale(1.03);
+}
+.miniatura {
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+.miniatura:hover {
+  transform: scale(1.05);
+}
+/* Nuevo: lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.lightbox-contenido {
+  position: relative;
+}
+.imagen-ampliada {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+.cerrar-lightbox {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  font-size: 30px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

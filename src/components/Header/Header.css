@@ -1,0 +1,98 @@
+.hero-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem 7rem;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.services-flex {
+  position: relative;
+  top: -60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 2rem;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 16px;
+  background-color: var(--color-white);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px; /* Altura mínima uniforme */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-wrapper {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.service-icon {
+  font-size: 5rem;
+  color: var(--color-primary);
+}
+
+.service-title {
+  font-weight: bold;
+}
+
+.service-desc {
+  color: #555;
+  flex-grow: 1; /* Empuja el contenido inferior si falta texto */
+}
+/* Opcional: hover del botón CTA */
+.hero-button {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+}
+
+.hero-button:hover {
+  color: #fff; /* Asegura que el texto siga blanco */
+  text-decoration: none;
+  transform: scale(1.05);
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .services-flex {
+    flex-direction: column;
+    top: -30px;
+  }
+
+  .service-card {
+    min-height: 100px; /* altura más baja para mobile */
+  }
+}

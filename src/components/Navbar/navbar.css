@@ -1,0 +1,58 @@
+.navbar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+}
+.navbar-links a {
+  font-weight: 500; /* o 700 para más negrita */
+  text-decoration: none;
+  color: inherit;
+}
+.navbar-links a:hover {
+  color:var(--color-primary)
+}
+/* Hover solo para enlaces dentro de navbar-links que NO tengan la clase navbar-cta */
+.navbar-links button:not(.navbar-cta):hover {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.navbar-links a:hover{
+  transform: scale(1.05);
+}
+/* Estilo botón CTA */
+.navbar-cta {
+  margin-left: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  color: var(--color-white);
+}
+/* Opcional: hover del botón CTA */
+.hero-button {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+}
+
+.hero-button:hover {
+  color: #fff; /* Asegura que el texto siga blanco */
+  text-decoration: none;
+  transform: scale(1.05);
+}

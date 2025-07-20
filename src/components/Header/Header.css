@@ -7,6 +7,9 @@
   background: linear-gradient(to right, #f8f9fa, #e9ecef);
   z-index: 1;
 }
+.hero-title {
+  margin-bottom: 1rem;
+}
 
 .hero-image {
   width: 100%;
@@ -67,6 +70,7 @@
   color: #555;
   flex-grow: 1; /* Empuja el contenido inferior si falta texto */
 }
+
 /* Opcional: hover del botón CTA */
 .hero-button {
   background-color: var(--color-primary);

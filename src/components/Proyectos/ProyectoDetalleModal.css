@@ -1,14 +1,11 @@
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
+  inset: 0; /* Simplifica top, left, width, height */
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999; /* Subirlo si otros elementos lo tapan */
 }
 
 .modal-detalle {
@@ -33,14 +30,14 @@
 }
 
 .modal-detalle h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
 .modal-detalle ul {
   list-style: none;
-  padding-left: 0;
+  padding-left: 10px;
 }
+
 .modal-detalle p,
 .modal-detalle ul,
 .modal-detalle li {
@@ -68,7 +65,7 @@
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.7rem 1.4rem;
-  background-color: #007bff;
+  background-color: var(--color-primary);
   color: white;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -114,11 +111,13 @@
 }
 .cerrar-lightbox {
   position: absolute;
-  top: -25px;
-  right: -25px;
+  top: 20px;
+  right: 20px;
   font-size: 30px;
   color: white;
   background: transparent;
   border: none;
   cursor: pointer;
+  z-index: 10000;
+  text-shadow: 0 0 5px black; /* Para que no se pierda sobre imágenes claras */
 }

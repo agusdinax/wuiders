@@ -1,74 +1,91 @@
-import "./Servicios.css";
+import {
+  Typography,
+  Box,
+  Paper
+} from "@mui/material";
 import WebIcon from "@mui/icons-material/Public";
 import AppIcon from "@mui/icons-material/Devices";
 import FrontendIcon from "@mui/icons-material/Code";
 import SpeedIcon from "@mui/icons-material/Speed";
-import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import BalanceIcon from '@mui/icons-material/Balance';
 import StrategyIcon from "@mui/icons-material/Lightbulb";
-import BusinessIcon from "@mui/icons-material/BusinessCenter";
+import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import "./Servicios.css";
 
 const servicios = [
   {
-    titulo: "Desarrollo de Sitios Web Estáticos",
+    titulo: "Sitios web estáticos",
     descripcion:
-      "Páginas web informativas con HTML y CSS. Diseño adaptable a todos los dispositivos.",
+      "Páginas informativas con diseño responsive para mostrar tu marca de forma clara y profesional.",
     icono: <WebIcon className="icono-servicio" />,
   },
   {
-    titulo: "Aplicaciones Web Dinámicas",
+    titulo: "Aplicaciones web dinámicas",
     descripcion:
-      "Apps interactivas con React y JS. Interfaces modernas y enrutamiento eficiente.",
-    icono: <AppIcon className="icono-servicio" />,
+      "Soluciones interactivas a medida: menús digitales, sistemas de pedidos y control diario desde cualquier dispositivo.",
+    icono: <AutoAwesomeMotionIcon className="icono-servicio" />,
   },
   {
-    titulo: "Desarrollo Frontend",
+    titulo: "Sistemas de gestión comercial",
     descripcion:
-      "Componentes reutilizables en React, integración de APIs, y foco en accesibilidad.",
+      "Organizá tu negocio con herramientas para turnos, delivery, stock y tareas, pensadas para emprendedores y comercios.",
+    icono: <ShoppingBasketIcon className="icono-servicio" />,
+  },
+  {
+    titulo: "Sistema de venta con balanza",
+    descripcion:
+      "Software conectado a balanzas comerciales (como Systel), ideal para panaderías, dietéticas, verdulerías y más.",
+    icono: <BalanceIcon className="icono-servicio" />,
+  },
+  {
+    titulo: "Ventas por WhatsApp",
+    descripcion:
+      "Sistemas que permiten recibir pedidos y gestionar ventas directamente desde WhatsApp, de forma rápida y ordenada.",
+    icono: <WhatsAppIcon className="icono-servicio" />,
+  },
+  {
+    titulo: "Diseño profesional y moderno",
+    descripcion:
+      "Interfaces modernas con excelente rendimiento y experiencia de usuario.",
     icono: <FrontendIcon className="icono-servicio" />,
   },
   {
-    titulo: "Optimización y Mantenimiento Web",
+    titulo: "Mantenimiento y soporte",
     descripcion:
-      "Velocidad, rendimiento, SEO básico y mantenimiento continuo para tu web.",
+      "Soporte técnico continuo, actualizaciones y mejoras para que tu sistema esté siempre funcionando correctamente y de acuerdo a tus necesidades.",
     icono: <SpeedIcon className="icono-servicio" />,
   },
   {
-    titulo: "Diseño UI/UX",
+    titulo: "Consultoría y estrategia",
     descripcion:
-      "Interfaces intuitivas y atractivas, con enfoque en la experiencia de usuario.",
-    icono: <DesignServicesIcon className="icono-servicio" />,
-  },
-  {
-    titulo: "Consultoría y Estrategia Digital",
-    descripcion:
-      "Te asesoramos para mejorar tu presencia digital y procesos con soluciones personalizadas.",
+      "Te asesoramos para optimizar tus procesos y ventas usando tecnología adaptada a tu rubro y tus clientes.",
     icono: <StrategyIcon className="icono-servicio" />,
-  },
-  {
-    titulo: "Sistemas para Pedidos y Procesos",
-    descripcion:
-      "Plataformas para pedidos online, turnos, toma de pedidos por WhatsApp e inventarios.",
-    icono: <BusinessIcon className="icono-servicio" />,
   },
 ];
 
 const Servicios = () => {
   return (
-    <section className="servicios">
+    <section className="servicios" id="servicios">
       <div className="servicios-header">
-        <h2>Nuestros Servicios</h2>
-        <p>
-          Ofrecemos una amplia gama de servicios para satisfacer todas sus necesidades. Desde el diseño web hasta sistemas conectados con WhatsApp.
-        </p>
+        <Typography variant="h2" component="h2" className="titulo-principal">
+          Nuestros <span>Servicios</span>
+        </Typography>
+        <Typography variant="h6" className="subtitulo-servicios">
+          Soluciones digitales para tu negocio: sistemas de pedidos, menús online, gestión con balanza, tareas diarias, y más. Todo personalizado para tu empresa.
+        </Typography>
       </div>
 
       <div className="servicios-grid">
         {servicios.map((servicio, index) => (
-          <div key={index} className="servicio-card">
-            <div className="servicio-icono">{servicio.icono}</div>
-            <h3>{servicio.titulo}</h3>
-            <p>{servicio.descripcion}</p>
-          </div>
+          <Paper key={index} elevation={3} className="servicio-card">
+            <Box className="servicio-icono">{servicio.icono}</Box>
+            <Typography variant="h6" component="h3">
+              {servicio.titulo}
+            </Typography>
+            <Typography variant="body2">{servicio.descripcion}</Typography>
+          </Paper>
         ))}
       </div>
     </section>

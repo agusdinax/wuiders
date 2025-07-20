@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./ProyectoDetalleModal.css";
-
+import {Typography} from "@mui/material";
 interface ProyectoDetalleModalProps {
   proyecto: {
     titulo: string;
     detalles: string[];
     imagenes: string[];
+    descripcion: string;
     link: string;
   };
   onClose: () => void;
@@ -23,12 +24,12 @@ const ProyectoDetalleModal = ({ proyecto, onClose }: ProyectoDetalleModalProps) 
     <div className="modal-overlay">
       <div className="modal-detalle">
         <button className="cerrar-modal" onClick={onClose}>×</button>
-
-        <h2>{proyecto.titulo}</h2>
+      <Typography variant="h2" component="h2" className="titulo-principal">
+        {proyecto.titulo}
+      </Typography>
         <p>
-          Este panel permite a los emprendedores gestionar sus pedidos diarios en tiempo real. Incluye funcionalidades como:
+          {proyecto.descripcion}
         </p>
-
         <ul>
           {proyecto.detalles.map((item, i) => (
             <li key={i}>{item}</li>

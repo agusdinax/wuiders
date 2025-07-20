@@ -2,13 +2,18 @@ import { useState } from "react";
 import "./Proyectos.css";
 import { proyectosData } from "../../data/proyectosData";
 import ProyectoDetalleModal from "../Proyectos/ProyectoDetalleModal";
-
+import {Typography} from "@mui/material";
 const Proyectos = () => {
   const [proyectoActivo, setProyectoActivo] = useState<number | null>(null);
 
   return (
     <section className="proyectos-container">
-      <h2>Nuestros Proyectos</h2>
+      <Typography variant="h2" component="h2" className="titulo-principal">
+        Nuestros <span>Proyectos</span>
+      </Typography>
+      <Typography variant="h6" className="subtitulo-servicios">
+        Algunos de los trabajos realizados: sitios web, sistemas de gestión, soluciones para comercios y herramientas conectadas como ventas con balanza.
+      </Typography>
       <div className="proyectos-grid">
         {proyectosData.map((proyecto, i) => (
           <div key={i} className="proyecto-card" onClick={() => setProyectoActivo(i)}>

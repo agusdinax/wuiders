@@ -1,5 +1,5 @@
 .proyectos-container {
-  padding: 4rem 2rem;
+  padding: 1rem 1rem;
   text-align: center;  
 }
 
@@ -7,9 +7,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
 }
-
 .proyecto-card {
   background-color: #fff;
   border-radius: 1rem;
@@ -20,7 +18,6 @@
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-
 .proyecto-card:hover {
   transform: translateY(-5px);
 }
@@ -35,10 +32,15 @@
 .proyecto-info {
   padding: 1rem;
 }
-
 .ver-mas {
   font-weight: bold;
-  color: #1976d2;
+  color: var(--color-primary);
   display: block;
   margin-top: 0.5rem;
+}
+.subtitulo-servicios {
+  color: #444;
+  font-size: 1.30rem;
+  text-align: center;
+  font-weight: 500;
 }

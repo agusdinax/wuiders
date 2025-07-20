@@ -1,8 +1,8 @@
 import React from "react";
-import { Button, Typography, Box, Paper } from "@mui/material";
+import { Typography, Box, Paper } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/Language";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
-import SmartphoneIcon from "@mui/icons-material/Smartphone";
+import BalanceIcon from '@mui/icons-material/Balance';
 import BuildIcon from "@mui/icons-material/Build";
 
 import headerImage from "../../assets/LOGO_NAV.png";
@@ -55,16 +55,15 @@ const Header: React.FC = () => {
     </Typography>
   </Paper>
 
-  {/* Apps móviles */}
   <Paper elevation={3} className="service-card">
     <Box className="icon-wrapper">
-      <SmartphoneIcon className="service-icon" />
+      <BalanceIcon className="service-icon" />
     </Box>
     <Typography variant="h6" className="service-title">
-      APLICACIONES MOBILE
+      SISTEMA DE VENTA CON BALANZA
     </Typography>
     <Typography variant="body2" className="service-desc">
-      Desarrollamos apps móviles funcionales y atractivas para Android y iOS, adaptadas a tus objetivos.
+      Software conectado a balanzas electrónicas que permite registrar ventas por peso o unidad.
     </Typography>
   </Paper>
 

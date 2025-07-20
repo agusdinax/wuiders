@@ -16,10 +16,11 @@ import logo from "../../assets/LOGO_NAV.png";
 import "./navbar.css";
 
 const navItems = [
-  { label: "Sobre Nosotros", href: "#sobre-nosotros" },
+  
   { label: "Servicios", href: "#servicios" },
   { label: "Proyectos", href: "#proyectos" },
   { label: "Contacto", href: "#contacto" },
+  { label: "Sobre Nosotros", href: "#sobre-nosotros" },
 ];
 
 export const Navbar: React.FC = () => {
@@ -92,7 +93,7 @@ export const Navbar: React.FC = () => {
               <Button
                 variant="contained"
                 onClick={() =>
-                  document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })
+                  document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })
                 }
                 fullWidth
                 sx={{ justifyContent: "flex-start", padding: "8px 16px" }}

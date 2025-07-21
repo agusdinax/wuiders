@@ -4,7 +4,6 @@ import {
   Paper
 } from "@mui/material";
 import WebIcon from "@mui/icons-material/Public";
-import AppIcon from "@mui/icons-material/Devices";
 import FrontendIcon from "@mui/icons-material/Code";
 import SpeedIcon from "@mui/icons-material/Speed";
 import BalanceIcon from '@mui/icons-material/Balance';

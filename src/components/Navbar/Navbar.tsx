@@ -19,8 +19,8 @@ const navItems = [
   
   { label: "Servicios", href: "#servicios" },
   { label: "Proyectos", href: "#proyectos" },
-  { label: "Contacto", href: "#contacto" },
   { label: "Sobre Nosotros", href: "#sobre-nosotros" },
+  { label: "Contacto", href: "#contacto" },
 ];
 
 export const Navbar: React.FC = () => {

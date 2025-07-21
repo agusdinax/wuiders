@@ -13,6 +13,10 @@
   color: #444;
 }
 
+.titulo-principal span {
+  color: var(--color-primary);
+}
+
 .personas {
   display: flex;
   justify-content: center;
